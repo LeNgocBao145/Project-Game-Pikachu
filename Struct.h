@@ -9,3 +9,8 @@ struct Player {
 	int score;
 	int life;
 };
+
+struct Account {
+	string username;
+	string password;
+};

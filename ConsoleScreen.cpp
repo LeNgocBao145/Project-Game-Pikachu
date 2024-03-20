@@ -1,12 +1,12 @@
 #include "ConsoleScreen.h"
 #include "function.h"
 
-void hideCursor()
+void hideCursor(bool visible)
 {
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_CURSOR_INFO cursor;
 	GetConsoleCursorInfo(console, &cursor);
-	cursor.bVisible = false;
+	cursor.bVisible = visible;
 	SetConsoleCursorInfo(console, &cursor);
 }
 
@@ -18,10 +18,10 @@ void setSizeOfScreen()
 }
 
 
-void createScreen()
+void createScreen(bool visible)
 {
 	
 	setSizeOfScreen();
-	hideCursor();
+	hideCursor(visible);
 	ShowScrollBar(GetConsoleWindow(), SB_VERT, 0);
 }

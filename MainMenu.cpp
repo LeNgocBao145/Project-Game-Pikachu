@@ -14,24 +14,9 @@ int showMainMenu()
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 	playMusicBackground();
 
-	moveToPosition(60, 2);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN); // Ð? cam
-	cout << " ____   ___  _  _______ __  __  ___  _   _ ";
-	moveToPosition(60, 3);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_INTENSITY); // Ð?
-	cout << "|  _ \\ / _ \\| |/ / ____|  \\/  |/ _ \\| \\ | |";
-	moveToPosition(60, 4);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY); // Ð? cam vàng
-	cout << "| |_) | | | | ' /|  _| | |\\/| | | | |  \\| |";
-	moveToPosition(60, 5);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // Vàng
-	cout << "|  __/| |_| | . \\| |___| |  | | |_| | |\\  |";
-	moveToPosition(60, 6);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN); // Ð? cam
-	cout << "|_|    \\___/|_|\\_\\_____|_|  |_|\\___/|_| \\_|";
-	moveToPosition(60, 7);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_INTENSITY); // Ð?
-	cout << "                                            ";
+
+	showTitlePokemon();
+
 
 	int choice = 1;
 	int key = 0;
