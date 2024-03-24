@@ -6,8 +6,8 @@ using namespace std;
 
 struct Player {
 	string name;
-	int score;
-	int life;
+	int score = 0;
+	int life = 3;
 };
 
 struct Account {

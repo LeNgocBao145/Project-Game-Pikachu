@@ -1,4 +1,5 @@
 ﻿#include "function.h"
+#include "ConsoleScreen.h"
 
 void moveToPosition(int x, int y)
 {
@@ -9,10 +10,11 @@ void moveToPosition(int x, int y)
 	SetConsoleCursorPosition(console, position);
 }
 
-int showMainMenu()
+int showMainMenu(bool soundBackground, bool soundEffect)
 {
+	createScreen(0);
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-	playMusicBackground();
+	playMusicBackground(soundBackground);
 
 
 	showTitlePokemon();
@@ -189,6 +191,7 @@ int showMainMenu()
 			cout << "EXIT GAME" << endl;
 		}
 
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 
 		int tmp = _getch();
 

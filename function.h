@@ -23,13 +23,13 @@ using namespace std;
 void moveToPosition(int x, int y);
 
 //Hien thi man hinh menu lua chon
-int showMainMenu();
+int showMainMenu(bool soundBackground, bool soundEffect);
 
 //Phat nhac hieu ung khi chien thang, thua hay an 
-void playMusicEffect();
+void playMusicEffect(bool soundEffect);
 
 //Phat nhac nen
-void playMusicBackground();
+void playMusicBackground(bool soundBackground);
 
 //Hien thi tieu de chu PIKACHU
 void showTitlePikachu();
@@ -40,7 +40,11 @@ void showTitlePokemon();
 //Hien thi giao dien Dang nhap / Dang ki
 int showLogIn();
 void signUpAccount();
-void signInAccount(Account* player, int quantityAccount);
+void signInAccount(Account* player, Player& rookie, int quantityAccount);
+
+bool checkIsExistAccount(Account* player, int quantityAccount, string username, string password);
+void readFileAccount(Account*& player, int& quantityAccount);
+void writeFileAccount(string Username, string Password);
 
 //Ve khung hinh chu nhat
 void drawRectangle(int x, int y, int width, int height);
@@ -49,3 +53,12 @@ void drawRectangle(int x, int y, int width, int height);
 //void writeFileAccount(int& quantityAccount, fstream& Account);
 //bool checkIsExistAccount(AccountVip* reader, int quantityAccount, string tendangnhap, string matkhau);
 //bool Login(AccountVip* reader, int& quantityAccount, fstream& Account);
+
+void writeLeaderBoard(Player p);
+void readLeaderBoard();
+
+int showSoundSettings();
+void editSoundSettings(bool& soundBackground, bool& soundEffect);
+void editMusicBackground(bool& soundBackground);
+void editSoundEffect(bool& soundEffect);
+void showGameMode();

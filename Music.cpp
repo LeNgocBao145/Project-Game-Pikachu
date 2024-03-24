@@ -1,8 +1,15 @@
 #include "function.h"
 
-void playMusicBackground()
+void playMusicBackground(bool sound)
 {
-	PlaySound(TEXT("SorryILikeYou-Burbank.wav"), NULL, SND_FILENAME|SND_ASYNC);
+	if (sound)
+	{
+		PlaySound(TEXT("NoiNhoTuaThienHa.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+	}
+	else
+	{
+		PlaySound(0, 0, 0);
+	}
 }
 
 //void playMusicEffect()
