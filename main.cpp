@@ -51,7 +51,7 @@ int main() {
 		switch (choice)
 		{
 			case 1:
-
+				createEasyRound();
 				break;
 			case 2:
 				showGameMode();

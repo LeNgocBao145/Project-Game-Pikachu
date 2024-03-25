@@ -8,7 +8,14 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include "EasyMode.h"
+#include "HardMode.h"
 
+#define EASYBOARDLENGTH 6
+#define EASYBOARDWIDTH 6
+
+#define HARDBOARDLENGTH 10
+#define HARDBOARDWIDTH 10
 
 #define PRESS_UP 72
 #define PRESS_DOWN 80

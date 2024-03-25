@@ -129,14 +129,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleScreen.cpp" />
+    <ClCompile Include="EasyMode.cpp" />
     <ClCompile Include="function.cpp" />
+    <ClCompile Include="HardMode.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Music.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleScreen.h" />
+    <ClInclude Include="EasyMode.h" />
     <ClInclude Include="function.h" />
+    <ClInclude Include="HardMode.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>
   <ItemGroup>
