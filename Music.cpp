@@ -1,8 +1,8 @@
 #include "function.h"
 
-void playMusicBackground(bool sound)
+void playMusicBackground(bool soundBackground)
 {
-	if (sound)
+	if (soundBackground)
 	{
 		PlaySound(TEXT("NoiNhoTuaThienHa.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 	}
@@ -12,10 +12,41 @@ void playMusicBackground(bool sound)
 	}
 }
 
-//void playMusicEffect()
-//{
-//
-//}
+void playMusicRound(bool soundBackground)
+{
+    if (soundBackground)
+    {
+        PlaySound(TEXT("videoplayback.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+    }
+    else
+    {
+        PlaySound(0, 0, 0);
+    }
+}
+
+void playWonEffect(bool soundEffect)
+{
+    if (soundEffect)
+    {
+        PlaySound(TEXT("Victory - Sound Effect (Download).wav"), NULL, SND_FILENAME | SND_ASYNC);
+    }
+    else
+    {
+        PlaySound(0, 0, 0);
+    }
+}
+
+void playLoseEffect(bool soundEffect)
+{
+    if (soundEffect)
+    {
+        PlaySound(TEXT("Lose sound effects.wav"), NULL, SND_FILENAME | SND_ASYNC);
+    }
+    else
+    {
+        PlaySound(0, 0, 0);
+    }
+}
 
 void editSoundEffect(bool& sound)
 {

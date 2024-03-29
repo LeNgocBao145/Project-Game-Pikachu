@@ -9,8 +9,18 @@ bool checkExist(int* nums, int index, int num);
 
 void selectEasyCell(easyCell** arr);
 
-void createEasyBoard(easyCell**& board);
+void chooseEasyCell(easyCell** board, Player& alpha, position& pos, position& selectedCell1, position& selectedCell2, int& status, int& pair);
 
-void createEasyRound();
+void createEasyBoard(easyCell**& board, Player alpha);
+
+void createEasyRound(Player* &ranker, int quantity, Player& alpha, bool soundEffect, bool soundBackground);
+
+void deleteCell(easyCell** board);
+
+void paintCell(easyCell** board, int col, int row, int color);
+
+void displayLifePoint(Player alpha);
+
+bool checkAnyAvailable(easyCell** board);
 
 

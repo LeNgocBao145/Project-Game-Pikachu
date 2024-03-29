@@ -18,6 +18,10 @@ int main() {
 	
 	Player alpha;
 
+	Player* ranker{};
+
+	int quantity = 0;
+
 	bool soundBackground = 1, soundEffect = 1;
 
 	int quantityAccount = 0;
@@ -25,6 +29,7 @@ int main() {
 	createScreen(0);
 
 	readFileAccount(player, quantityAccount);
+	
 
 	int choice1 = showLogIn();
 	
@@ -34,13 +39,13 @@ int main() {
 			signInAccount(player, alpha, quantityAccount);
 			break;
 		case 2:
-			signUpAccount();
+			signUpAccount(alpha);
 			break;
 		default:
 			cout << "LUA CHON KHONG HOP LE!" << endl;
 	}
 
-	
+	readLeaderBoard(ranker, alpha, quantity);
 	
 	system("cls");
 
@@ -51,16 +56,16 @@ int main() {
 		switch (choice)
 		{
 			case 1:
-				createEasyRound();
+				createEasyRound(ranker, quantity, alpha, soundEffect, soundBackground);
 				break;
 			case 2:
-				showGameMode();
+				showGameMode(ranker, quantity, alpha, soundEffect, soundBackground);
 				break;
 			case 3:
 				editSoundSettings(soundBackground, soundEffect);
 				break;
 			case 4:
-				readLeaderBoard();
+				showLeaderBoard(ranker, quantity, alpha);
 				break;
 			case 5:
 				return 0;
@@ -68,6 +73,7 @@ int main() {
 			default:
 				cout << "LUA CHON KHONG HOP LE!" << endl;
 		}
+
 	}
 	
 	delete[] player;

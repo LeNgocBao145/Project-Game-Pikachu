@@ -128,6 +128,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CheckEasyCell.cpp" />
+    <ClCompile Include="CheckHardMode.cpp" />
     <ClCompile Include="ConsoleScreen.cpp" />
     <ClCompile Include="EasyMode.cpp" />
     <ClCompile Include="function.cpp" />
@@ -137,13 +139,17 @@
     <ClCompile Include="Music.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CheckEasyCell.h" />
+    <ClInclude Include="CheckHardMode.h" />
     <ClInclude Include="ConsoleScreen.h" />
     <ClInclude Include="EasyMode.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="HardMode.h" />
+    <ClInclude Include="SoundSettings.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="LeaderBoard.txt" />
     <Text Include="Player.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

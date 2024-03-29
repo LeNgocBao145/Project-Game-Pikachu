@@ -36,6 +36,12 @@
     <ClCompile Include="HardMode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CheckEasyCell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckHardMode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Struct.h">
@@ -53,9 +59,21 @@
     <ClInclude Include="HardMode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CheckEasyCell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckHardMode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Player.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="LeaderBoard.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

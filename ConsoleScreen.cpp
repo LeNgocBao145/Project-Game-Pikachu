@@ -14,7 +14,7 @@ void hideCursor(bool visible)
 void setSizeOfScreen()
 {
 	HWND consoleWindow = GetConsoleWindow();
-	ShowWindow(consoleWindow, SW_MAXIMIZE);
+	ShowWindow(consoleWindow, SW_SHOWMAXIMIZED);
 }
 
 

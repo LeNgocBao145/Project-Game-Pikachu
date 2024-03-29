@@ -23,14 +23,16 @@ struct Account {
 struct easyCell {
 	position pos;
 	char data;
-	bool isAvailable = 1;
-	bool isChoosen = 0;
+	bool isAvailable = true;
+	bool isChoosen = false;
 };
 
 struct hardCell {
 	position pos;
+	int row;
+	int col;
 	char data;
 	hardCell* next;
-	bool isAvailable;
-	bool isChoosen = 0;
+	bool isAvailable = true;
+	bool isChoosen = false;
 };
